@@ -1,4 +1,5 @@
-import Intro from "./components/intro/Intro"
+import Intro from "./components/Intro";
+
 
 const App = () => {
   return <div><Intro/></div>;
