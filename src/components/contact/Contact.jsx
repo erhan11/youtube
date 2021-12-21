@@ -2,12 +2,31 @@ import Phone from "../../img/phone.jpeg";
 import Email from "../../img/phone.jpeg";
 import Address from "../../img/address.png";
 import "./contact.css"
+import { useRef } from "react"
+import emailjs from 'emailjs-com';
+import { useState } from 'react';
 
-function Contact() {
-  return (
-    <div className="c">
+
+
+const Contact = () => {
+    const formRef = useRef()
+const [done, setDone] = useState(false)
+    const handleSubmit = (e)=> {
+        e.preventDefault();
+        emailjs.sendForm('service_ntrzo6l', 'template_5oglupq', formRef.current, 'user_hYWSlP6ia5W9Gby3XOPxu')
+        .then((result) => {
+            console.log(result.text);
+            setDone(true)
+        }, (error) => {
+            console.log(error.text);
+        });
+    };
+    
+    return (
+
+<div className="c">
       <div className="c-bg"></div>
-      <div className="wrapper">
+      <div className="c-wrapper">
         <div className="c-left">
           <h1 className="c-title">Lets discus your project</h1>
           <div className="c-info">
@@ -33,12 +52,13 @@ function Contact() {
             <p className="c-desc">
                 <b>Whats your story?</b>
             </p>
-            <form>
+            <form ref={formRef} onSubmit={handleSubmit}>
             <input type="text" placeholder="Name" name="user_name" />
             <input type="text" placeholder="Subject" name="user_subject" />
             <input type="text" placeholder="Email" name="user_email" />
             <textarea rows="5" placeholder="Message" name="message"></textarea>
            <button>Submit</button>
+           {done && "Mesajınız için teşekkür ederiz."}
             </form>
         </div>
       </div>
