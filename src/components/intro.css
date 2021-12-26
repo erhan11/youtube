@@ -19,7 +19,7 @@
   height: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between
+  justify-content: space-between;
 }
 
 .i-intro {
@@ -93,4 +93,20 @@
   position: absolute;
   top: 0;
   right: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .i {
+    flex-direction: column;
+  }
+  .i-left-wrapper {
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 100%;
+  }
+  .i-desc {
+    display: none;
+  }
 }

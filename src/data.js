@@ -16,4 +16,9 @@ export const products = [
     img: "https://www.zeldadungeon.net/wiki/images/thumb/f/fd/Link.png/400px-Link.png",
     link: "http:/lama.dev",
 },
-]
+{
+    id: 4,
+    img: "https://www.zeldadungeon.net/wiki/images/thumb/f/fd/Link.png/400px-Link.png",
+    link: "http:/lama.dev",
+},
+];
