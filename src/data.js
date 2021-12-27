@@ -1,7 +1,7 @@
 export const products = [
 {
     id: 1,
-    "img": "./img/verigo.png",
+    "img": "verigo.png",
     "link": "http:/lama.dev",
 },
 {
