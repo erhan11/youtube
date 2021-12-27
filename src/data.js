@@ -1,9 +1,7 @@
-import Verigo from "./img/verigo.png";
-
 export const products = [
 {
     id: 1,
-    "img": {Verigo},
+    "img": "./img/verigo.png",
     "link": "http:/lama.dev",
 },
 {

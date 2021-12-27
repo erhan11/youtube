@@ -2,11 +2,11 @@
   padding: 50px 100px;
   display: flex;
   flex-direction: column;
-  text-align: center;
+  align-items: center;
   text-align: center;
 }
 
-.pl-text {
+.pl-texts {
   width: 65%;
 }
 
@@ -18,19 +18,23 @@
 .pl-desc {
   margin: 20px 0px;
 }
+
 .pl-list {
-  display: flex;
   width: 100%;
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
 @media screen and (max-width: 480px) {
   .pl {
     padding: 10px;
   }
-  .pl-text {
+
+  .pl-texts {
     width: 100%;
   }
+
   .pl-desc {
     display: none;
   }
